@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+  <script>
+    'use strict';
+    let start = 2;
+    let n;
+    do {
+      n = prompt('Введите число больше ' + start, '');
+    } while (n <= start)
+
+    label: for (let i = start; i < n; i++) {
+      for (let j = 2; j < i; j++) {
+        if (!(i % j)) {
+          continue label;
+        }
+      }
+      alert(i);
+    }
+  </script>
+
+
+  <p>...после скриптов</p>
+</body>
+
+</html>

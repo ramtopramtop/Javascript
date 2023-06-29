@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+  <script>
+    'use strict';
+    const USER='Админ';
+    const PASSWORD='Я Главный';
+    let inputLogin = prompt('Кто там?');
+
+    if (inputLogin == USER)
+    {
+      let inputPassword = prompt('Пароль?');
+      if (inputPassword == PASSWORD)
+      {
+        alert('Здравствуйте!');
+      }
+      else
+      {
+        if (inputPassword)
+        {
+          alert('Неверный пароль');
+        }
+        else
+        {
+          alert('Отменено');
+        }
+      }
+    }
+    else
+    {
+      if (inputLogin)
+      {
+      alert('Я вас не знаю');
+      }
+      else
+      {
+        alert('Отменено');
+      }
+    }
+    
+  </script>
+
+  
+  <p>...после скриптов</p>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+  <script>
+    'use strict';
+    let menu = {
+      width: 200,
+      height: 300,
+      title: "My menu"
+    };
+    multiplyx2(menu);
+    display_object(menu);
+    //alert(sum_salary({}));
+
+    function multiplyx2(calculating_object) {
+      
+      for (let property in calculating_object) {
+        if (typeof(calculating_object[property])=="number")
+        calculating_object[property]= calculating_object[property]*2;
+      }
+      
+    }
+    function display_object(calculating_object) {
+      let display ="";
+      for (let property in calculating_object) {
+        display = display + property +':'+ calculating_object[property]+', ';
+      }
+      alert(display);
+    }
+
+  </script>
+
+
+  <p>...после скриптов</p>
+</body>
+
+</html>

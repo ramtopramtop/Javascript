@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+  <script>
+    'use strict';
+    let salaries = {
+      John: 100,
+      Ann: 160,
+      Pete: 130
+    }
+
+    alert(sum_salary(salaries));
+    alert(sum_salary({}));
+    
+    function sum_salary(calculating_object) {
+      let sum = 0;
+      for (let property in calculating_object) {
+        sum = sum + calculating_object[property];
+      }
+      return sum;
+    }
+    
+  </script>
+
+
+  <p>...после скриптов</p>
+</body>
+
+</html>

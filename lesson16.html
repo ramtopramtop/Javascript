@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+  <script>
+    'use strict';
+    let calculator = {
+      a: 0,
+      b: 0,
+      read() {
+        this.a = +prompt("Введите а");
+        this.b = +prompt("Введите b")
+      },
+      sum() {
+        return this.a + this.b;
+      },
+      mul() {
+        return this.a * this.b;
+      }
+    };
+
+    calculator.read();
+    alert(calculator.sum());
+    alert(calculator.mul());
+
+  </script>
+
+
+  <p>...после скриптов</p>
+</body>
+
+</html>

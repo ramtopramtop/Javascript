@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+  <script>
+    'use strict';
+    function readNumber() {
+      let some_number = '';
+      do {
+        some_number = prompt('Введите число');
+        //if (isNaN(some_number)){
+        //  return null;
+       // } 
+      }
+      while ((some_number == null) || (some_number != +some_number))
+      return some_number;
+    }
+    alert (readNumber());
+  </script>
+
+
+  <p>...после скриптов</p>
+</body>
+
+</html>

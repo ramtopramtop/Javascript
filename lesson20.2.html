@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+  <script>
+    'use strict';
+    function checkSpam(str) {
+      let stop1 = "viagra";
+      let stop2 = "xxx";
+      if ((str.toLowerCase().includes(stop1))||(str.toLowerCase().includes(stop2))) {
+        return true;
+      }
+      return false;
+
+    }
+
+    alert(checkSpam('buy ViAgRA now')); //== true;
+    alert(checkSpam('free xxxxx')); // == true;
+    alert(checkSpam("innocent rabbit")); // == false;
+
+  </script>
+
+
+  <p>...после скриптов</p>
+</body>
+
+</html>

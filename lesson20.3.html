@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+  <script>
+    'use strict';
+    function truncate(str, str_length) {
+
+      if (str.length > str_length) {
+        str = str.slice(0, str_length - 1) + "…";
+      }
+      return str;
+    }
+
+    alert(truncate("Вот, что мне хотелось бы сказать на эту тему:", 20));// = "Вот, что мне хотело…"
+    alert(truncate("Всем привет!", 20)); // = "Всем привет!"
+
+  </script>
+
+
+  <p>...после скриптов</p>
+</body>
+
+</html>

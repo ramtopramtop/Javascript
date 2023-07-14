@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+  <script>
+    'use strict';
+    function sumInput() {
+      let user_values = [];
+      do {
+        let current_user_value = prompt("Введите цифру для массива");
+        if (current_user_value == +current_user_value) {
+          user_values.push(current_user_value);
+        }
+        else {
+          break;
+        }
+      }
+      while (user_values);
+      let sum = +0;
+      for (let i=0; i<user_values.length; i++){
+        sum = +user_values[i]+ sum; 
+      }
+      alert(sum);
+    }
+
+    sumInput();
+  </script>
+
+
+  <p>...после скриптов</p>
+</body>
+
+</html>

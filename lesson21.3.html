@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+  <script>
+    'use strict';
+    function getMaxSubSum(array) {
+      let sum_max = +0;
+      let sum_current = +0;
+      //let j = +0;
+      for (let i = 0; i < array.length; i++) {
+        sum_current = +array[i] + sum_current;
+        if (sum_current <= 0) {
+          sum_current = 0;
+          //j = i;
+        }
+        else {
+          if (sum_current> sum_max){
+            sum_max=sum_current;
+          }
+        }
+      }
+      return sum_max;
+    }
+
+    alert(getMaxSubSum([-1, 2, 3, -9, 11]));// == 11
+  </script>
+
+
+  <p>...после скриптов</p>
+</body>
+
+</html>

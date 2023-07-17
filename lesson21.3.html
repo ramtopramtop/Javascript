@@ -7,12 +7,12 @@
     function getMaxSubSum(array) {
       let sum_max = +0;
       let sum_current = +0;
-      //let j = +0;
+    
       for (let i = 0; i < array.length; i++) {
         sum_current = +array[i] + sum_current;
         if (sum_current <= 0) {
           sum_current = 0;
-          //j = i;
+       
         }
         else {
           if (sum_current> sum_max){

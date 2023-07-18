@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+  <script>
+    'use strict';
+    function camelize(str) {
+      let arr = str.split('-');
+      return arr;
+    }
+
+    camelize("background-color") == 'backgroundColor';
+    camelize("list-style-image") == 'listStyleImage';
+    camelize("-webkit-transition") == 'WebkitTransition';
+  </script>
+
+  <p>...после скриптов</p>
+</body>
+
+</html>

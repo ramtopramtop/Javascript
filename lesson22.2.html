@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+  <script>
+    'use strict';
+    function filterRangeInPlace(arr, a, b) {
+      let array_lenght = arr.length;
+      for (let i = 0; i < array_lenght; i++) {
+        if (!(arr[i] >= a && arr[i] <= b)) {
+          arr.splice(i, 1);
+          i = i - 1;
+          array_lenght = array_lenght - 1;
+        }
+      }
+    }
+
+    let arr = [5, 3, 8, 1];
+
+    filterRangeInPlace(arr, 1, 4); // удалены числа вне диапазона 1..4
+
+    alert(arr); // [3, 1]
+  </script>
+
+  <p>...после скриптов</p>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+  <script>
+    'use strict';
+    function Calculator() {
+      this.methods = 
+        {'+':(a, b) => a + b ,
+        '-':(a, b) => a - b };
+
+      this.calculate = function (stream) {
+        let operators = stream.split(' ');
+        return this.methods[operators[1]](+operators[0],+operators[2])
+      }
+      this.addMethod = function(operator, arr_function){
+        this.methods[operator] = arr_function;
+      }
+    }
+
+    let calc = new Calculator;
+
+    alert(calc.calculate("3 + 7")); // 10
+
+  </script>
+
+  <p>...после скриптов</p>
+</body>
+
+</html>
+
+</html>

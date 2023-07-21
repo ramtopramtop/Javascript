@@ -3,32 +3,17 @@
 
 <body>
   <script>
-    function shuffle(names) {
-      //return names.sort((a, b) => a - b);
-      return names.sort((a,b)=>((Math.round(Math.random())*2-1)*a)+(Math.round(Math.random())*2-1)*b);
+    'use strict';
+    function getAverageAge(users) {
+     return (users.reduce((sum, current) => sum + current.age, 0)/users.length);
     }
+    let vasya = { name: "Вася", age: 25 };
+    let petya = { name: "Петя", age: 30 };
+    let masha = { name: "Маша", age: 29 };
 
-    let arr = [1, 2, 3];
+    let arr = [vasya, petya, masha];
 
-    let count = {
-  '123': 0,
-  '132': 0,
-  '213': 0,
-  '231': 0,
-  '321': 0,
-  '312': 0
-};
-
-for (let i = 0; i < 1000000; i++) {
-  let array = [1, 2, 3];
-  shuffle(array);
-  count[array.join('')]++;
-}
-
-// показать количество всех возможных вариантов
-for (let key in count) {
-  alert(`${key}: ${count[key]}`);
-}
+    alert(getAverageAge(arr)); // (25 + 30 + 29) / 3 = 28
   </script>
 
   <p>...после скриптов</p>

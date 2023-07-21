@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+  <script>
+    'use strict';
+    function unique(arr) {
+      let unique_result = [];
+      for (let i = 0; i < arr.length;i++){
+        if(!unique_result.includes(arr[i]))
+        unique_result.push(arr[i]);
+      }
+      return unique_result;
+    }
+
+    let strings = ["кришна", "харе", "харе", "кришна",
+      "кришна", "кришна", "кришна", "кришна", ":-O"
+    ];
+
+    alert(unique(strings)); // кришна, харе, :-O
+  </script>
+
+  <p>...после скриптов</p>
+</body>
+
+</html>
+
+</html>

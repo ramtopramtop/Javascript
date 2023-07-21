@@ -3,6 +3,7 @@
 
 <body>
   <script>
+    'use strict'
     function shuffle(names) {
       //return names.sort((a, b) => a - b);
       return names.sort((a,b)=>((Math.round(Math.random())*2-1)*a)+(Math.round(Math.random())*2-1)*b);
